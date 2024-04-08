@@ -61,11 +61,6 @@ public class Vehicle {
 
     public void adjustForBurn(int burnAmount) {
         // set burn to burnamount requested
-        // save previousAltitude with current Altitude
-        // set new velocity to result of computeDeltaV function.
-        // subtract speed from Altitude
-        // subtract burn amount fuel used from tank
-        // set burn to burnamount requested
         Burn = burnAmount;
         // save previousAltitude with current Altitude
         PrevAltitude = Altitude;
@@ -89,7 +84,7 @@ public class Vehicle {
     public DescentEvent getStatus(int tick) {
         // create a return a new DescentEvent object
         // filled in with the state of the vehicle.
-        return new DescentEvent(tick,Velocity, Fuel, Burn, Altitude);
+        return new DescentEvent(tick, Velocity, Fuel, Altitude, Flying);
     }
 
 }
